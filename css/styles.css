@@ -1,0 +1,51 @@
+body
+{
+	background-color: limegreen;
+}
+.maintitle
+{
+	text-align: center;
+	margin-top: 50px;
+	font-size: 68pt;
+	font-family: helvetica;
+	color: yellow;
+}
+.subtitle
+{
+	font-size: 38px;
+	font-family: helvetica;
+	text-align: center;
+	color: white;
+}
+#gradelist
+{
+	margin: 0 auto;
+	width: 330px;
+	list-style-type: none;
+	padding: 0;
+}
+#gradelist li
+{
+	width: 320px;
+	margin-bottom: 10px;
+	float: left;
+}
+#gradelist a
+{
+	float: left;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 12px;
+	background: limegreen;
+	color: white;
+	font-size: 47px;
+	font-family: helvetica;
+	border-radius: 4px;
+	border: 2px solid white;
+	width: 320;
+	text-align: center;
+}
+#gradelist a.visited
+{
+	text-decoration: none;
+}
