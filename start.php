@@ -6,6 +6,19 @@ echo <<<EOHTML
 <link rel="stylesheet" href="css/styles.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="js/jquery.transit.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#submitword').bind('mouseenter',function(){
+		$(this).transition({backgroundColor: 'yellow',color: 'limegreen',border: '2px solid yellow', queue: false},150);
+		$(this).bind('mouseout',function() {
+			$(this).transition({backgroundColor: '',color: 'white',border: '2px solid white', queue: false},150);
+			$(this).unbind('mouseout');
+			return false;
+		});
+		return false;
+	});
+});
+</script>
 </head>
 <body>
 
