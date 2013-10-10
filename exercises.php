@@ -48,6 +48,15 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+	$('.cylink').bind('mouseenter',function(){
+		$(this).transition({backgroundColor: 'yellow',color: 'limegreen',border: '2px solid yellow', queue: false},150);
+		$(this).bind('mouseout',function() {
+			$(this).transition({backgroundColor: '',color: 'white',border: '2px solid white', queue: false},150);
+			$(this).unbind('mouseout');
+			return false;
+		});
+		return false;
+	});
 	setTimeout(function() {
 		$('#spellhere').focus();
 	}, 250);
@@ -55,7 +64,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<a href="index.php">Home</a><br/>
+<a class="cylink" href="index.php">Home</a><br/>
 <br/>
 <div class="exercisetext">$problems exercises left.</div>
 <img id="image" border="0" src="$picture"  width="304" height="228"><br/>
@@ -78,10 +87,23 @@ echo <<<EOHTML
 <link rel="stylesheet" href="css/styles.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="js/jquery.transit.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('.cylink').bind('mouseenter',function(){
+		$(this).transition({backgroundColor: 'yellow',color: 'limegreen',border: '2px solid yellow', queue: false},150);
+		$(this).bind('mouseout',function() {
+			$(this).transition({backgroundColor: '',color: 'white',border: '2px solid white', queue: false},150);
+			$(this).unbind('mouseout');
+			return false;
+		});
+		return false;
+	});
+});
+</script>
 </head>
 <body>
 
-<a href="index.php">Home</a><br/>
+<a class="cylink" href="index.php">Home</a><br/>
 
 <p>
 <div class="exercisetext" >Thank you for playing! :)</div>
