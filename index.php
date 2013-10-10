@@ -30,7 +30,6 @@ $(document).ready(function(){
 <p class="subtitle">A learning game for kids.</p>
 
 <ul id="gradelist">
-<li><a href="start.php?grade=prek">Pre-K</a></li>
 <li><a href="start.php?grade=k">Kindergarten</a></li>
 <li><a href="start.php?grade=1">First Grade</a></li>
 <li><a href="start.php?grade=2">Second Grade</a></li>

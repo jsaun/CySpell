@@ -48,6 +48,9 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+	setTimeout(function() {
+		$('#spellhere').focus();
+	}, 250);
 });
 </script>
 </head>
@@ -59,7 +62,7 @@ $(document).ready(function(){
 <span class="exercisetext">What is this?</span>
 <form action="" method="post">
 	<input type="hidden" name="problems" value="$problems">
-	<input id="spellhere" type="text" name="answer"><br>
+	<input id="spellhere" type="text" name="answer" autocomplete="off"><br>
 	<input id="submitword" type="submit">
 </form>
 
