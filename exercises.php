@@ -1,22 +1,25 @@
 <?php 
 $problems = $_POST["problems"] - 1;
 $grade = $_POST["grade"];
-
+//$grade = 1;
 if($problems >= 0) {
 
 $db = new PDO("sqlite:cyspell.db");
 
-$results = $db->query("SELECT * FROM problems WHERE grade = $grade");
+$results = $db->query("SELECT * FROM problems");
 
 $arr = array();
 $i = 0;
 foreach($results as $row){
-	$arr[$i] = array("picture" => $row['picture'], "answer" => $row['answer']);
-   	$i++;	
+
+	if($grade == $row['grade']){
+		$arr[$i] = array("picture" => $row['picture'], "answer" => $row['answer']);
+		$i++;
+	}	
 }
 
-$id = rand(count($arr));
-$picture =  $arr[$id]['picture']; 
+$id = rand(0, count($arr));
+$picture =  $arr[$id]['picture'];
 $answer =  $arr[$id]['answer'];
 
 //$picture = "images/apple.png";
@@ -60,6 +63,7 @@ $(document).ready(function(){
 <span class="exercisetext">What is this?</span>
 <form action="" method="post">
 	<input type="hidden" name="problems" value="$problems">
+	<input type="hidden" name="grade" value=$grade>
 	<input id="spellhere" type="text" name="answer" autocomplete="off"><br>
 	<input id="submitword" type="submit">
 </form>
