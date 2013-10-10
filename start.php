@@ -17,12 +17,21 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+	$('.cylink').bind('mouseenter',function(){
+		$(this).transition({backgroundColor: 'yellow',color: 'limegreen',border: '2px solid yellow', queue: false},150);
+		$(this).bind('mouseout',function() {
+			$(this).transition({backgroundColor: '',color: 'white',border: '2px solid white', queue: false},150);
+			$(this).unbind('mouseout');
+			return false;
+		});
+		return false;
+	});
 });
 </script>
 </head>
 <body>
 
-<a href="index.php">Back</a><br/><br/>
+<a class="cylink" href="index.php">Back</a><br/><br/>
 
 <span class="exercisetext">Level: $grade</span>
 
