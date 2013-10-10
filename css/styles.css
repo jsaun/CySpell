@@ -1,6 +1,7 @@
 body
 {
 	background-color: limegreen;
+	text-align: center;
 }
 .maintitle
 {
@@ -48,4 +49,41 @@ body
 #gradelist a.visited
 {
 	text-decoration: none;
+}
+#spellhere
+{
+	border: 2px solid yellow;
+	border-radius: 4px;
+	background-color: limegreen;
+	line-height: 80px;
+	width: 450px;
+	text-align: center;
+	font-family: helvetica;
+	font-size: 69px;
+	color: white;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+#submitword	
+{
+	border: 2px solid yellow;
+	color: white;
+	background-color: limegreen;
+	font-size: 40px;
+	font-family: helvetica;
+	padding: 30px;
+	line-height: 0px;
+	border-radius: 4px;
+}
+.exercisetext
+{
+	color: white;
+	font-size: 24px;
+	font-family: helvetica;
+}
+#image
+{
+	border-radius: 10px;
+	border: 2px solid yellow;
+	margin: 30px;
 }

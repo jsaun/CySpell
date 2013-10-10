@@ -2,6 +2,11 @@
 $grade = $_GET['grade'];
 echo <<<EOHTML
 <html>
+<head>
+<link rel="stylesheet" href="css/styles.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+</head>
 <body>
 
 <a href="index.php">Back</a><br/><br/>

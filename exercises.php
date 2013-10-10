@@ -6,14 +6,19 @@ if($problems >= 0) {
 
 $db = new PDO("sqlite:cyspell.db");
 
-$results = $db->query("SELECT * FROM problems WHERE grade = '1'");
-
+$results = $db->query("SELECT * FROM problems;");
+var_dump(count($results));
 $id = rand(count($results));
 $picture =  $results[$id]['picture']; 
 $answer =  $results[$id]['answer'];
 
 echo <<<EOHTML
 <html>
+<head>
+<link rel="stylesheet" href="css/styles.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+</head>
 <body>
 <a href="index.php">Home</a><br/>
 <br/>
@@ -34,6 +39,11 @@ EOHTML;
 else {
 echo <<<EOHTML
 <html>
+<head>
+<link rel="stylesheet" href="css/styles.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+</head>
 <body>
 
 <a href="index.php">Home</a><br/>
