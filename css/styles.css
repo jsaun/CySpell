@@ -90,11 +90,24 @@ body
 #probsdropdown
 {
 	font-size: 30px;
-	border: 2px solid yellow;
 	background-color: limegreen;
-	border-radius: 4px;
 	color: white;
-	margin-top: 50px;
-	margin-bottom: 50px;
 	padding-left: 13px;
+	position: relative;
+	left: -15px;
+	border: none;
+	padding-right: 10px;
+}
+#dropdowncont
+{
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	height: 36px;
+	margin-top: 50px;
+	width: 42px;
+	margin-bottom: 50px;
+	padding-left: 0;
+	border: 2px solid yellow;
+	border-radius: 3px;
 }
