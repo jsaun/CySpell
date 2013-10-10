@@ -6,12 +6,13 @@ if($problems >= 0) {
 
 $db = new PDO("sqlite:cyspell.db");
 
-$results = $db->query("SELECT * FROM problems;");
-var_dump(count($results));
-$id = rand(count($results));
-$picture =  $results[$id]['picture']; 
-$answer =  $results[$id]['answer'];
+//$results = $db->query("SELECT * FROM problems");
 
+//$id = rand(count($results));
+//$picture =  $results[$id]['picture']; 
+//$answer =  $results[$id]['answer'];
+
+$picture = "images/apple.png";
 echo <<<EOHTML
 <html>
 <head>
@@ -22,13 +23,13 @@ echo <<<EOHTML
 <body>
 <a href="index.php">Home</a><br/>
 <br/>
-$problems exercises left. <br/><br/>
-<img border="0" src="$picture"  width="304" height="228"><br/>
-What is this? <br/>
+<div> class="exercisetext">$problems exercises left.</div>
+<img id="image" border="0" src="$picture"  width="304" height="228"><br/>
+<span class="exercisetext">What is this?</span>
 <form action="" method="post">
 	<input type="hidden" name="problems" value="$problems">
-	<input type="text" name="answer"><br>
-	<input type="submit">
+	<input id="spellhere" type="text" name="answer"><br>
+	<input id="submitword" type="submit">
 </form>
 
 </body>
@@ -49,7 +50,7 @@ echo <<<EOHTML
 <a href="index.php">Home</a><br/>
 
 <p>
-Thank you for playing! :)
+<div class="exercisetext" >Thank you for playing! :)</div>
 </p>
 
 </body>

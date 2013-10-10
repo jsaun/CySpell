@@ -11,7 +11,7 @@ echo <<<EOHTML
 
 <a href="index.php">Back</a><br/><br/>
 
-Level: $grade
+<span class="exercisetext">Level: $grade</span>
 
 <form action="exercises.php" method="post">
 	<input type="hidden" name="grade" value="$grade">
@@ -43,7 +43,7 @@ Level: $grade
 		<option value="25" selected>25</option>
 	</select>
 	Problems <br/>
-	<input type="submit">
+	<input id="submitword" type="submit">
 </form>
 
 
