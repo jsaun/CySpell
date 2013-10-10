@@ -28,11 +28,33 @@ echo <<<EOHTML
 <link rel="stylesheet" href="css/styles.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="js/jquery.transit.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('#submitword').bind('mouseenter',function(){
+		$(this).transition({backgroundColor: 'yellow',color: 'limegreen',border: '2px solid yellow', queue: false},150);
+		$(this).bind('mouseout',function() {
+			$(this).transition({backgroundColor: '',color: 'white',border: '2px solid white', queue: false},150);
+			$(this).unbind('mouseout');
+			return false;
+		});
+		return false;
+	});
+	$('#spellhere').bind('focus', function() {
+		$(this).transition({border: '2px dashed yellow', backgroundColor: 'green', queue: false},150);
+		$(this).bind('mouseout',function() {
+			$(this).transition({backgroundColor: 'limegreen',border: '2px solid yellow', queue: false},150);
+			$(this).unbind('mouseout');
+			return false;
+		});
+		return false;
+	});
+});
+</script>
 </head>
 <body>
 <a href="index.php">Home</a><br/>
 <br/>
-<div> class="exercisetext">$problems exercises left.</div>
+<div class="exercisetext">$problems exercises left.</div>
 <img id="image" border="0" src="$picture"  width="304" height="228"><br/>
 <span class="exercisetext">What is this?</span>
 <form action="" method="post">
