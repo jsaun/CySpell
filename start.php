@@ -55,7 +55,7 @@ $(document).ready(function(){
 		<option value="24">24</option>
 		<option value="25" selected>25</option>
 	</select></div>
-	<span style="color: white; font-size: 30px; font-family: helvetica" >Problems </span><br>
+	<span style="color: white; font-size: 30px; font-family: helvetica; top: -60px; position: relative;" >Problems </span><br>
 	<input id="submitword" style="display: block; margin: 0 auto;" type="submit">
 </form>
 
