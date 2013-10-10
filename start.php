@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 <form action="exercises.php" method="post">
 	<input type="hidden" name="grade" value="$grade">
-	<select name="problems">
+	<div id="dropdowncont"><select id="probsdropdown" name="problems">
 		<option value="1">1</option>
 		<option value="2">2</option>
 		<option value="3">3</option>
@@ -54,8 +54,8 @@ $(document).ready(function(){
 		<option value="23">23</option>
 		<option value="24">24</option>
 		<option value="25" selected>25</option>
-	</select>
-	Problems <br/>
+	</select></div>
+	<span style="color: white; font-size: 30px;" >Problems </span>
 	<input id="submitword" type="submit">
 </form>
 

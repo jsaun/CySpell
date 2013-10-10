@@ -4,16 +4,22 @@ $grade = $_POST["grade"];
 
 if($problems >= 0) {
 
-//$db = new PDO("sqlite:backup.db");
+$db = new PDO("sqlite:cyspell.db");
 
-//$results = $db->query("SELECT * FROM problems");
-//var_dump($results[0]['picture']);
+$results = $db->query("SELECT * FROM problems WHERE grade = $grade");
 
-//$id = rand(count($results));
-//$picture =  $results[$id]['picture']; 
-//$answer =  $results[$id]['answer'];
+$arr = array();
+$i = 0;
+foreach($results as $row){
+	$arr[$i] = array("picture" => $row['picture'], "answer" => $row['answer']);
+   	$i++;	
+}
 
-$picture = "images/apple.png";
+$id = rand(count($arr));
+$picture =  $arr[$id]['picture']; 
+$answer =  $arr[$id]['answer'];
+
+//$picture = "images/apple.png";
 echo <<<EOHTML
 <html>
 <head>
@@ -40,6 +46,9 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+	setTimeout(function() {
+		$('#spellhere').focus();
+	}, 250);
 });
 </script>
 </head>
@@ -51,7 +60,7 @@ $(document).ready(function(){
 <span class="exercisetext">What is this?</span>
 <form action="" method="post">
 	<input type="hidden" name="problems" value="$problems">
-	<input id="spellhere" type="text" name="answer"><br>
+	<input id="spellhere" type="text" name="answer" autocomplete="off"><br>
 	<input id="submitword" type="submit">
 </form>
 
