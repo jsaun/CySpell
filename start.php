@@ -9,6 +9,7 @@ echo <<<EOHTML
 Level: $grade
 
 <form action="exercises.php" method="post">
+	<input type="hidden" name="grade" value="$grade">
 	<select name="problems">
 		<option value="1">1</option>
 		<option value="2">2</option>

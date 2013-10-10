@@ -1,26 +1,16 @@
 <?php 
 $problems = $_POST["problems"] - 1;
+$grade = $_POST["grade"];
 
 if($problems >= 0) {
 
 $db = new PDO("sqlite:cyspell.db");
 
-//TODO need a better way to get size
-$result = $db->query("SELECT rowid FROM problems");
-$size = 0;
-foreach($result as $row)
-	$size++;
+$results = $db->query("SELECT * FROM problems WHERE grade = '1'");
 
-$id = rand(1, $size);
-$result = $db->query("SELECT * FROM problems WHERE rowid = $id");
-
-//TODO need to fix this too
-$picture  = "";
-$answer = "";
-foreach($result as $row) {
-	$picture =  $row['picture'];      
-	$answer =  $row['answer'];
-}
+$id = rand(count($results));
+$picture =  $results[$id]['picture']; 
+$answer =  $results[$id]['answer'];
 
 echo <<<EOHTML
 <html>
