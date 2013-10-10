@@ -24,6 +24,11 @@ foreach($result as $row) {
 
 echo <<<EOHTML
 <html>
+<head>
+<link rel="stylesheet" href="css/styles.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+</head>
 <body>
 <a href="index.php">Home</a><br/>
 <br/>
@@ -44,6 +49,11 @@ EOHTML;
 else {
 echo <<<EOHTML
 <html>
+<head>
+<link rel="stylesheet" href="css/styles.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+</head>
 <body>
 
 <a href="index.php">Home</a><br/>
