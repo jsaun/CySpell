@@ -34,6 +34,7 @@ $(document).ready(function(){
 <li><a href="start.php?grade=1">First Grade</a></li>
 <li><a href="start.php?grade=2">Second Grade</a></li>
 <li><a href="start.php?grade=3">Third Grade</a></li>
+<li><a href="start.php?grade=4">Fourth Grade</a></li>
 </ul>
 
 </body>

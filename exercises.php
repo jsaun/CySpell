@@ -41,9 +41,9 @@ $(document).ready(function(){
 	});
 	$('#spellhere').bind('focus', function() {
 		$(this).transition({border: '2px dashed yellow', backgroundColor: 'green', queue: false},150);
-		$(this).bind('mouseout',function() {
+		$(this).bind('blur',function() {
 			$(this).transition({backgroundColor: 'limegreen',border: '2px solid yellow', queue: false},150);
-			$(this).unbind('mouseout');
+			$(this).unbind('blur');
 			return false;
 		});
 		return false;
